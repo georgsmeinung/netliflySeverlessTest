@@ -1,3 +1,5 @@
+const fetch = require('node-fetch')
+
 exports.handler = async (event, context) => {
     const COUNTRY = event.queryStringParameters.iso
     const API_URL = 'https://restcountries.com/v3.1/alpha/'+COUNTRY
