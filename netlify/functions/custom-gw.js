@@ -1,12 +1,13 @@
 exports.handler = async (event, context) => {
-    console.log("### CUSTOM GS ### "+(new Date()).toISOString+" ###")
+    var currenTime = new Date().toISOString;
+    console.log("### CUSTOM GS ### "+currenTime+" ###")
     console.log(JSON.stringify(event.body))
     console.log("##################################################")
     return {
         statusCode: 200,
         body: JSON.stringify({
-          event: event,
-          context: context
+          isodate: currenTime,
+          message: JSON.stringify(event.body)
         })
     };
 };
