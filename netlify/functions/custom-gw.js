@@ -1,9 +1,7 @@
 exports.handler = async (event, context) => {
-    console.log("### CUSTOM GS ### "+(new Date()).toISOString)
-    console.log("### EVENT ###")
-    console.log(JSON.stringify(event))
-    console.log("### CONTEXT ###")
-    console.log(JSON.stringify(context))
+    console.log("### CUSTOM GS ### "+(new Date()).toISOString+" ###")
+    console.log(JSON.stringify(event.body))
+    console.log("##################################################")
     return {
         statusCode: 200,
         body: JSON.stringify({
